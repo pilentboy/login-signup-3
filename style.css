@@ -1,0 +1,147 @@
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    --bkColor:#938ada;
+    --purple1:#7974b6;
+    --borderColor:#665eaa;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bkColor);
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width:500px) {
+    .container{
+        width: 100vw !important;
+        height: 100vh !important;
+    }
+}
+
+#mainIcon {
+
+}
+
+.container{
+    width: 330px;
+    height: 550px;
+   
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.container::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    clip-path: polygon(40% 0, 100% 0%, 100% 100%, 0 100%, 81% 32%);
+    background-color: var(--borderColor);
+    border-radius: 10px;
+}
+
+
+.container .box{
+    width: 100%;
+    z-index: 10;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 12%;
+}
+
+.container .item{
+    border-bottom: 1px solid gray;
+    width: 50%;
+    padding: 5px 0;
+    display: flex;
+}
+
+.box .item i{
+    color: var(--purple1);
+    font-size: 20px;
+}
+
+.box input::placeholder{
+    color: gray;
+}
+
+.box input{
+    border: none;
+    outline: none;
+    background-color:transparent;
+
+}
+
+#loginBTN{
+    width:70%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    color: var(--borderColor);
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 1px 1px 2px 1px var(--bkColor);
+}
+
+#loginBTN #mainIcon{
+  font-size:20px !important;
+  margin-right: 70px;
+  transition: all 0.5s;
+}
+
+#loginBTN:hover > #mainIcon{
+    transform: translateX(150%);
+    transition: all 0.5s;
+}
+
+#loginBTN:hover{
+    font-weight: bold !important;
+}
+
+.socialMediasLink{
+    position: absolute;
+    width: 70%;
+    top: 90%;
+    left: 50%;
+    z-index: 20;
+}
+.socialMediasLink:after{
+    width: 100%;
+    height: 250px;
+    background-color: var(--bkColor);
+    top: -100%;
+    right: 25%;
+    transform: rotate(40deg);
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+.socialMediasLink i{
+    z-index: 10;
+    margin: 0 10px;
+    color: white;
+}
